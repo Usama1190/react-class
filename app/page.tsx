@@ -88,21 +88,50 @@ import Image from "next/image";
 
 
 
-import Gallery from "./components/Gallery";
-// import { Profile } from "./components/Gallery";    // named export
-import ToDo from "./components/ToDo";
-import Avatar from "./components/Avatar";
-import ToDoList from "./components/ToDoList";
-import Profile from "./components/Profile";
+// import Gallery from "./components/Gallery";
+// // import { Profile } from "./components/Gallery";    // named export
+// import ToDo from "./components/ToDo";
+// import Avatar from "./components/Avatar";
+// import ToDoList from "./components/ToDoList";
+// import Profile from "./components/Profile";
+
+// export default function Home() {
+//   return (
+//     <div>
+//       <Profile person={{ name: 'Lin Lanying', imageId: '1bX5QH6' }}
+//         size={100}/>
+//       {/* <ToDo /> */}
+//       {/* <Avatar /> */}
+//       {/* <ToDoList /> */}
+//     </div>
+//   )
+// }
+
+
+
+
+
+// import PackingList from "./components/PakingList";
+
+// export default function Home() {
+//   return (
+//     <div>
+//       <PackingList />
+//     </div>
+//   )
+// }
+
+
+
+
+import PackingList from "./components/PakingList";
+import List from "./components/List";
 
 export default function Home() {
   return (
     <div>
-      <Profile person={{ name: 'Lin Lanying', imageId: '1bX5QH6' }}
-        size={100}/>
-      {/* <ToDo /> */}
-      {/* <Avatar /> */}
-      {/* <ToDoList /> */}
+      {/* <PackingList /> */}
+      <List />
     </div>
   )
 }

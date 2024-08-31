@@ -16,12 +16,7 @@ export default function Avatar({person, size = 500}: AvatarType) {   // default 
     return (
         <>
             <h1>{name}</h1>
-            <img
-            src={avatar}
-            alt={name}
-            width={size}
-            height={size}
-            />
+            <img src={avatar} alt={name} width={size} height={size} />
         </>
 
     )
