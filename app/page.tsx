@@ -196,7 +196,7 @@ export default function Home() {
 
 
 
-
+/*
 import PackingList from "./components/PakingList";
 import PlayButton from "./components/PlayButton";
 import UploadButton from "./components/UploadButton";
@@ -207,6 +207,26 @@ export default function Home() {
       <PlayButton movieName="Kiki's Delivery Service" />
       <br />
       <UploadButton />
+    </div>
+  )
+}
+*/
+
+
+
+
+
+
+
+
+import PackingList from "./components/PakingList";
+import SculptureGallery from "./components/SculptureGallery";
+
+
+export default function Home() {
+  return (
+    <div>
+      <SculptureGallery />
     </div>
   )
 }
