@@ -52,23 +52,25 @@ const people = [{
     accomplishment: 'white dwarf star mass calculations',
     imageId: 'lrWQx8l'
 }];
-  
+
 
 export default function List() {
-    const chemists = people.filter((person => person.profession === 'chemist'));
-    const listItems: any = chemists.map((person) => {
-        <li>
-            <img
-            src={`https://i.imgur.com/${person.imageId}s.jpg`}
-            alt={person.name}
-            />
-            <p>
-                <b>{person.name}:</b>
-                {' ' + person.profession + ' '}
-                known for {person.accomplishment}
-            </p>
-        </li>
-    });
+    const chemists = people.filter((person => person.profession === 'physicist'));
+    const listItems = chemists.map((person) => {
+        return (
+            <li key={person.id}>
+                <img
+                src={`https://i.imgur.com/${person.imageId}s.jpg`}
+                alt={person.name}
+                />
+                <p>
+                    <b>{person.name}:</b>
+                    {' ' + person.profession + ' '}
+                    known for {person.accomplishment}
+                </p>
+            </li>
+        );
+    }); 
     
     return <ul>{listItems}</ul>
 };
