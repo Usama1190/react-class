@@ -124,14 +124,89 @@ import Image from "next/image";
 
 
 
+// import PackingList from "./components/PakingList";
+// import List from "./components/List";
+
+// export default function Home() {
+//   return (
+//     <div>
+//       {/* <PackingList /> */}
+//       <List />
+//     </div>
+//   )
+// }
+
+
+
+
+
+
+
+/*
 import PackingList from "./components/PakingList";
-import List from "./components/List";
+import Button from "./components/Button";
 
 export default function Home() {
   return (
     <div>
-      {/* <PackingList /> */}
-      <List />
+      <Button />
+    </div>
+  )
+}
+*/
+
+
+
+
+
+/*
+import PackingList from "./components/PakingList";
+import Button from "./components/Button";
+
+export default function Home() {
+  return (
+    <div>
+      <Button />
+    </div>
+  )
+}
+*/
+
+
+
+
+
+
+
+/*
+import PackingList from "./components/PakingList";
+import AlertButton from "./components/AlertButton";
+
+export default function Home() {
+  return (
+    <div>
+      <AlertButton message='Playing!'>Play Movie</AlertButton>
+      <br />
+      <AlertButton message='Uploading!'>Upload Image</AlertButton>
+    </div>
+  )
+}
+*/
+
+
+
+
+
+import PackingList from "./components/PakingList";
+import PlayButton from "./components/PlayButton";
+import UploadButton from "./components/UploadButton";
+
+export default function Home() {
+  return (
+    <div>
+      <PlayButton movieName="Kiki's Delivery Service" />
+      <br />
+      <UploadButton />
     </div>
   )
 }
