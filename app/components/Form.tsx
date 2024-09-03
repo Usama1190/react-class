@@ -8,6 +8,18 @@ export default function Form() {
 
     const [status, setStatus] = useState('typing'); // 'typing', 'submitting', or 'success'
 
+    async function handleSubmit(e: any) {
+      e.preventDefault();
+      setStatus('submitting');
+      try {
+        await submitForm(answer);
+        setStatus('success');
+      } catch (err: any) {
+        setStatus('typing');
+        setError(err);
+      }
+    }
+
     function handleTextareaChange(e: any) {
       setAnswer(e.target.value);
       console.log(answer);
@@ -23,10 +35,10 @@ export default function Form() {
         <p>
           In which city is there a billboard that turns air into drinkable water?
         </p>
-        <form>
+        <form onSubmit={handleSubmit}>
           <textarea 
-          disabled={status === 'submitting'}
           value={answer}
+          disabled={status === 'submitting'}
           onChange={handleTextareaChange}  />
           <br />
           <button disabled={
@@ -45,4 +57,19 @@ export default function Form() {
       </>
     )
   }
+  
+
+  function submitForm(answer: any) {
+    // Pretend it's hitting the network.
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        let shouldError = answer.toLowerCase() !== 'lima'
+        if (shouldError) {
+          reject(new Error('Good guess but a wrong answer. Try again!'));
+        } else {
+          resolve('');     // own change resolve();
+        } 
+    }, 1500);
+  });
+}
   
