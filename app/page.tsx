@@ -237,7 +237,7 @@ export default function Home() {
 
 
 
-
+/*
 import PackingList from "./components/PakingList";
 import SculptureGallery from "./components/SculptureGallery";
 import Form from "./components/Form";
@@ -247,6 +247,26 @@ export default function Home() {
   return (
     <div>
       <Form />
+    </div>
+  )
+}
+*/
+
+
+
+
+
+
+
+import PackingList from "./components/PakingList";
+import SculptureGallery from "./components/SculptureGallery";
+import Form from "./components/Form";
+
+
+export default function Home() {
+  return (
+    <div>
+      {/* <Form /> */}
     </div>
   )
 }
