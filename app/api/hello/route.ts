@@ -63,9 +63,9 @@ export async function PUT(request: NextRequest) {
 
 export async function DELETE(request: NextRequest) {
 
-    return NextResponse.json({
-        To: "Zia",
-        Message: "I have deleted the greetings",
-        RequestType: "DELETE",
-    });
+  return NextResponse.json({
+    To: "Zia",
+    Message: "I have deleted the greetings",
+    RequestType: "DELETE",
+  });
 }
